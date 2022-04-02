@@ -6,6 +6,8 @@ describe("My first test", () => {
     })
     it("Should navigate to the google homepage", () => {
         cy.visit("www.google.com");
+        cy.url().should("contain", "google");
+        cy.title().should("equal", "Google");
     })
     it("Should verify an assertion", () => {
         let x = true;
